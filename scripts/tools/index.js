@@ -109,7 +109,7 @@ function serverDatabase(config, app) {
   var appConfig = config.apps.filter(function ( obj ) {
       return obj.name === app;
   })[0];
-  return 'server.database='+appConfig.database;
+  return '--server.database='+appConfig.database;
 }
 
 function logLevel(config) {
