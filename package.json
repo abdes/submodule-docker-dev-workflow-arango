@@ -1,0 +1,15 @@
+{
+  "name": "arango",
+  "version": "1.0.0",
+  "private": true,
+  "description": "XXX",
+  "author": "Abdessattar Sassi <abde.sassi@gmail.com>",
+  "license": "MIT",
+  "bin": { "arango-tools": "./scripts/tools/index.js" },
+  "scripts": {
+    "tools": "./scripts/tools/index.js"
+  },
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "hello",
+  "version": "1.0.0",
+  "description": "This is a Greeting microservice",
+  "author": "Abdessattar Sassi",
+  "engines": {
+    "arangodb": "^3.0.0"
+  },
+  "main": "index.js"
+}
