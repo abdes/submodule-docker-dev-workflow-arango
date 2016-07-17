@@ -16,9 +16,10 @@ router.get('/greet', function (req, res) {
   console.info("Generated random number: ", key);
   const data = greets.document(key.toString());
   console.info(data);
+  res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify(data));
 })
-.response(['text/json'], 'A random greeting.')
+.response(['application/json'], 'A random greeting.')
 .summary('Random greeting')
 .description('Returns a random greeting.');
 
