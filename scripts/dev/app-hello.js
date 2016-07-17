@@ -31,11 +31,11 @@ function _createCollection(collection) {
 
 function _populateGreetings(greets) {
   console.info('Populating collection [%s]', 'greetings');
-  greets.save({message: 'message 1'});
-  greets.save({message: 'message 2'});
-  greets.save({message: 'message 3'});
-  greets.save({message: 'message 4'});
-  greets.save({message: 'message 5'});
+  greets.save({message: 'Hello World!'});
+  greets.save({message: 'Salutaions!'});
+  greets.save({message: 'Greetings Stranger!'});
+  greets.save({message: 'How do you do?'});
+  greets.save({message: 'Howdy!'});
   console.debug(
     'Collection [%s] now has [%i] entries',
     'greetings',

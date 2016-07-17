@@ -17,7 +17,8 @@ router.get('/greet', function (req, res) {
   const data = greets.document(key.toString());
   console.info(data);
   res.setHeader('Content-Type', 'application/json');
-  res.send(JSON.stringify(data));
+  // DO NOT use JSON.stringify here
+  res.json(data);
 })
 .response(['application/json'], 'A random greeting.')
 .summary('Random greeting')
