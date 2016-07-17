@@ -32,6 +32,16 @@ program
     runFoxxManager(config, app, 'development');
   });
 
+program
+  .command('enable-prod <app>')
+  .alias('prod')
+  .description('enable production mode for an app')
+  .action(function(app){
+    const config = loadConfig(program.environment);
+    console.log('set production mode for %s ', app);
+    runFoxxManager(config, app, 'production');
+  });
+
 program.parse(process.argv);
 
 
@@ -49,7 +59,7 @@ function runArangoSh(config, script) {
     '--javascript.execute='+script
   ].join(' ');
   console.log(cmd);
-  child_process.execSync(cmd);
+  console.log(child_process.execSync(cmd).toString());
 }
 
 function runFoxxManager(config, app, command) {
@@ -67,7 +77,7 @@ function runFoxxManager(config, app, command) {
     '/'+app
   ].join(' ');
   console.log(cmd);
-  child_process.execSync(cmd);
+  console.log(child_process.execSync(cmd).toString());
 }
 
 
