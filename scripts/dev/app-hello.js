@@ -32,7 +32,7 @@ function _createCollection(collection) {
 function _populateGreetings(greets) {
   console.info('Populating collection [%s]', 'greetings');
   greets.save({message: 'Hello World!'});
-  greets.save({message: 'Salutaions!'});
+  greets.save({message: 'Salutations!'});
   greets.save({message: 'Greetings Stranger!'});
   greets.save({message: 'How do you do?'});
   greets.save({message: 'Howdy!'});
